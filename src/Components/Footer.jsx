@@ -56,7 +56,6 @@ const Footer = () => {
           </svg>
           <span
             className="text-2xl font-bold tracking-tight"
-            style={{ fontFamily: "'Sora', sans-serif" }}
           >
             ZapShift
           </span>
