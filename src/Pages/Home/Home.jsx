@@ -9,6 +9,7 @@ import {
   MdHandshake,
   MdAssignmentReturn,
 } from "react-icons/md";
+import BrandMarquee from "./BrandMarquee";
 
 const Home = () => {
   const workingProcess = [
@@ -159,6 +160,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* brand marquee */}
+      
+      <BrandMarquee></BrandMarquee>
     </div>
   );
 };
