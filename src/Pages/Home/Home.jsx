@@ -10,6 +10,7 @@ import {
   MdAssignmentReturn,
 } from "react-icons/md";
 import BrandMarquee from "./BrandMarquee";
+import FeaturesSection from "./FeaturesSection";
 
 const Home = () => {
   const workingProcess = [
@@ -161,8 +162,9 @@ const Home = () => {
         </div>
       </section>
       {/* brand marquee */}
-      
       <BrandMarquee></BrandMarquee>
+      {/* featuresSection */}
+      <FeaturesSection></FeaturesSection>
     </div>
   );
 };
