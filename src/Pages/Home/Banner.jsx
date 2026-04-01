@@ -7,7 +7,7 @@ import banner3 from "../../assets/banner/banner3.png";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="mt-4">
       <Carousel
         autoPlay={true}
         showArrows={false}
