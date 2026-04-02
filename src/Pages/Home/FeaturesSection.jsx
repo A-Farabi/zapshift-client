@@ -28,7 +28,8 @@ const FeaturesSection = () => {
     },
   ];
 
-  return <div>
+  return ( 
+  <div>
     <section className="py-12 px-4">
       {/* Dashed border wrapper */}
       <div className="max-w-4xl mx-auto border-2 border-dashed border-gray-300 rounded-2xl p-6 flex flex-col gap-5">
@@ -62,7 +63,8 @@ const FeaturesSection = () => {
         ))}
       </div>
     </section>
-  </div>;
+  </div>
+  );
 };
 
 export default FeaturesSection;

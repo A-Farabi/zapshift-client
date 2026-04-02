@@ -11,6 +11,7 @@ import {
 } from "react-icons/md";
 import BrandMarquee from "./BrandMarquee";
 import FeaturesSection from "./FeaturesSection";
+import MarchantSection from "./MarchantSection";
 
 const Home = () => {
   const workingProcess = [
@@ -165,6 +166,8 @@ const Home = () => {
       <BrandMarquee></BrandMarquee>
       {/* featuresSection */}
       <FeaturesSection></FeaturesSection>
+      {/* marchant satisfaction */}
+      <MarchantSection></MarchantSection>
     </div>
   );
 };
