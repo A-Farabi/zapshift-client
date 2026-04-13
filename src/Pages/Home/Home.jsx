@@ -12,6 +12,7 @@ import {
 import BrandMarquee from "./BrandMarquee";
 import FeaturesSection from "./FeaturesSection";
 import MarchantSection from "./MarchantSection";
+import CustomerReviews from "./CustomersReviews";
 
 const Home = () => {
   const workingProcess = [
@@ -168,6 +169,8 @@ const Home = () => {
       <FeaturesSection></FeaturesSection>
       {/* marchant satisfaction */}
       <MarchantSection></MarchantSection>
+      {/* Customers review section */}
+      <CustomerReviews></CustomerReviews>
     </div>
   );
 };
