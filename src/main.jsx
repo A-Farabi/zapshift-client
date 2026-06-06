@@ -6,6 +6,7 @@ import "./index.css";
 import MainLayout from "./Layouts/MainLayout";
 import ErrorPage from "./Pages/ErrorPage";
 import Coverage from "./Pages/Coverage";
+import About from "./Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
         path: "/Coverage",
         element: <Coverage></Coverage>,
         loader: () => fetch('/warehouses.json').then(res => res.json())
-      }
+      },
+      {
+        path: "/about-us",
+        element: <About></About>,
+      },
     ],
   },
 ]);
