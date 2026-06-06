@@ -7,6 +7,7 @@ import MainLayout from "./Layouts/MainLayout";
 import ErrorPage from "./Pages/ErrorPage";
 import Coverage from "./Pages/Coverage";
 import About from "./Pages/About";
+import AuthLayout from "./Layouts/AuthLayout";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,21 @@ const router = createBrowserRouter([
         element: <About></About>,
       },
     ],
+
   },
+  {
+    path: "/",
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path: "login"
+
+      },
+      {
+        path: "register"
+      }
+    ]
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
@@ -37,7 +52,7 @@ createRoot(document.getElementById("root")).render(
       <div className="full-width bg-[#EAECED]">
         <div className="w-[90%] mx-auto">
           <RouterProvider router={router} />
-        </div> 
+        </div>
       </div>
     </div>
   </StrictMode>,
