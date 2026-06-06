@@ -54,9 +54,11 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
-            <img src="/src/assets/logo.png" alt="" /> ZapShift
-          </a>
+          <NavLink to="/">
+            <a className="btn btn-ghost text-xl">
+              <img src="/src/assets/logo.png" alt="" /> ZapShift
+            </a>
+          </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
