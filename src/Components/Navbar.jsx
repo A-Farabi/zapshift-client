@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = (
@@ -64,12 +64,16 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end gap-2">
+          <NavLink to="/login">
           <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-outline">
             Sign In
           </button>
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-lime-400">
+          </NavLink>
+          <NavLink to="/register">
+            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-lime-400">
             Sign Up
           </button>
+          </NavLink>
         </div>
       </div>
     </div>

@@ -8,6 +8,8 @@ import ErrorPage from "./Pages/ErrorPage";
 import Coverage from "./Pages/Coverage";
 import About from "./Pages/About";
 import AuthLayout from "./Layouts/AuthLayout";
+import Login from "./Pages/Auth/login";
+import Register from "./Pages/Auth/Register";
 
 const router = createBrowserRouter([
   {
@@ -36,11 +38,12 @@ const router = createBrowserRouter([
     element: <AuthLayout></AuthLayout>,
     children: [
       {
-        path: "login"
-
+        path: "/login",
+element: <Login></Login>
       },
       {
-        path: "register"
+        path: "/register",
+        element: <Register> </Register>
       }
     ]
   }
