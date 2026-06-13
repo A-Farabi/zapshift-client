@@ -4,7 +4,7 @@ import authimg from '../assets/Mislenious/authImage.png'
 
 function AuthLayout() {
     return (
-        <div>
+        <div className='text-black'>
             <NavLink to="/">
                 <a className="btn btn-ghost text-xl">
                     <img src="/src/assets/logo.png" alt="" /> ZapShift

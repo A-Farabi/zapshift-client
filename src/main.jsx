@@ -10,6 +10,7 @@ import About from "./Pages/About";
 import AuthLayout from "./Layouts/AuthLayout";
 import Login from "./Pages/Auth/login";
 import Register from "./Pages/Auth/Register";
+import AuthProvider from "../Context/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/login",
-element: <Login></Login>
+        element: <Login></Login>
       },
       {
         path: "/register",
@@ -54,7 +55,9 @@ createRoot(document.getElementById("root")).render(
     <div className="font-urbanist">
       <div className="full-width bg-[#EAECED]">
         <div className="w-[90%] mx-auto">
-          <RouterProvider router={router} />
+          <AuthProvider>
+            <RouterProvider router={router} />
+          </AuthProvider>
         </div>
       </div>
     </div>
