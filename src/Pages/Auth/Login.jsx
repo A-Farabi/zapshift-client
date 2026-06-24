@@ -1,6 +1,8 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import useAuth from '../../../Hooks/useAuth'
+import { Link } from 'react-router-dom'
+import SocialLogin from './SocialLogin/SocialLogin'
 
 function Login() {
 
@@ -31,6 +33,10 @@ function Login() {
                                 <button className="btn btn-neutral mt-4">Login</button>
                             </fieldset>
                         </form>
+                        <div>
+                            <h3>Don't have any account? <Link to="/register" className='text-green-700'>Register</Link></h3>
+                        </div>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
