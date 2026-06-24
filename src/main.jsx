@@ -8,9 +8,9 @@ import ErrorPage from "./Pages/ErrorPage";
 import Coverage from "./Pages/Coverage";
 import About from "./Pages/About";
 import AuthLayout from "./Layouts/AuthLayout";
-import Login from "./Pages/Auth/login";
 import Register from "./Pages/Auth/Register";
 import AuthProvider from "../Context/AuthProvider";
+import Login from "./Pages/Auth/Login";
 
 const router = createBrowserRouter([
   {
