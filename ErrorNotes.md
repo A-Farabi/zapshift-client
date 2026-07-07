@@ -1,0 +1,1 @@
+All faced error in this project will be write down below:-
