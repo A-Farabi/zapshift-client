@@ -1,7 +1,21 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
+
+  const { user, logOut } = useAuth()
+
+  const handleLogOut = () => {
+    logOut()
+      .then(res => {
+        console.log("Logout succesfully")
+      })
+      .catch(err => {
+        console.log("logout error: ", err.message)
+      })
+  }
+
   const navItems = (
     <>
       <li>
@@ -55,25 +69,24 @@ const Navbar = () => {
             </ul>
           </div>
           <NavLink to="/">
-            <a className="btn btn-ghost text-xl">
+            <button className="btn btn-ghost text-xl">
               <img src="/src/assets/logo.png" alt="" /> ZapShift
-            </a>
+            </button>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end gap-2">
-          <NavLink to="/login">
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-outline">
-            Sign In
-          </button>
-          </NavLink>
-          <NavLink to="/register">
-            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-lime-400">
-            Sign Up
-          </button>
-          </NavLink>
+          {
+            user ? <button onClick={handleLogOut} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-outline" >
+              LogOut
+            </button> : <NavLink to="/login">
+              <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-outline">
+                Sign In
+              </button>
+            </NavLink>
+          }
         </div>
       </div>
     </div>

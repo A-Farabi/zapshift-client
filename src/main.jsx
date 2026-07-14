@@ -11,6 +11,7 @@ import AuthLayout from "./Layouts/AuthLayout";
 import Register from "./Pages/Auth/Register";
 import AuthProvider from "../Context/AuthProvider";
 import Login from "./Pages/Auth/Login";
+import PrivateRoutes from "./routes/privateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about-us",
-        element: <About></About>,
+        element: <PrivateRoutes><About></About></PrivateRoutes>,
       },
     ],
 
