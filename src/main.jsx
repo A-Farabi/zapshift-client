@@ -12,6 +12,7 @@ import Register from "./Pages/Auth/Register";
 import AuthProvider from "../Context/AuthProvider";
 import Login from "./Pages/Auth/Login";
 import PrivateRoutes from "./routes/privateRoutes";
+import JoinRider from "./Pages/Rider/JoinRider";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <PrivateRoutes><About></About></PrivateRoutes>,
+      },
+      {
+        path: "/join-rider",
+        element: <PrivateRoutes><JoinRider></JoinRider></PrivateRoutes>,
       },
     ],
 

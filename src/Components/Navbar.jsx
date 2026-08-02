@@ -87,9 +87,9 @@ const Navbar = () => {
               </button>
             </NavLink>
           }
-          <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-primary">
+          <Link to="join-rider" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-primary">
               Be A Rider
-              </button>
+              </Link>
         </div>
       </div>
     </div>
