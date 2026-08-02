@@ -8,7 +8,7 @@ import axios from 'axios';
 function Register() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { registerUser } = useAuth()
+  const { registerUser, updateUserProfile } = useAuth()
 
   const handleRegistration = (data) => {
 
@@ -24,6 +24,15 @@ function Register() {
         axios.post(`https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_Image_Hosting_Key}`, formData)
           .then(res => {
             console.log(res.data.data.url)
+
+            // updating user
+            const updateProfile = {
+              displayName: data.name,
+              dispayUrl: res.data.data.url
+            }
+updateUserProfile(updateProfile)
+            .then()
+            .catch(err => alert(err.message))
           })
 
       })
